@@ -13,7 +13,7 @@ resource "azurerm_virtual_network" "aks_vnet" {
 resource "azurerm_subnet" "aks_subnet" {
   name                  = "${var.project}-${var.environment}-subnet"
   virtual_network_name  = "${azurerm_virtual_network.aks_vnet.name}"
-  resource_group_name   = "${var.resouce_group_name}"
+  resource_group_name   = "${var.resource_group_name}"
   address_prefix        = "${var.subnet_cidr}"
 }
 
