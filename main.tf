@@ -4,7 +4,7 @@ resource "azurerm_virtual_network" "aks_vnet" {
   resource_group_name   = "${var.resource_group_name}"
   address_space         = "${var.vnet_cidr}"
 
-  tags {
+  tags = {
       Environment       = "${var.environment}"
       project           = "${var.project}"
   }
